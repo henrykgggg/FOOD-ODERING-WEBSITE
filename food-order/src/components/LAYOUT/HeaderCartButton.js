@@ -6,7 +6,7 @@ return <button className={classes.button}>
         <CartIcon />
     </span>
     <span>your Cart</span>
-    <span>3</span>
+    <span className={classes.badge}>3</span>
 </button>
 }
 
