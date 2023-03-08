@@ -1,3 +1,6 @@
+import classes from './AvailableMeals.module.css'
+
+
 const DUMMY_MEALS = [
   {
     id: "m1",
