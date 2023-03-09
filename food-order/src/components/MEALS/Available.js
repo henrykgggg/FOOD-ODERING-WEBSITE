@@ -1,16 +1,17 @@
+import Cart from '../UI/Cart';
 import classes from './AvailableMeals.module.css'
 
 
 const DUMMY_MEALS = [
   {
     id: "m1",
-    name: "Sushi",
-    description: "Finest fish and veggies",
+    name: "pirau",
+    description: "rice,onion  , asante , pirau masara",
     price: 22.99,
   },
   {
     id: "m2",
-    name: "Schnitzel",
+    name: "mangoes",
     description: "A german specialty!",
     price: 16.5,
   },
@@ -22,17 +23,20 @@ const DUMMY_MEALS = [
   },
   {
     id: "m4",
-    name: "Green Bowl",
+    name: "pizza",
     description: "Healthy...and green...",
     price: 18.99,
   },
 ];
 
 const AvailableMeals = () => {
-  const mealsList = DUMMY_MEALS.map((meals) => <li>{meals.name}</li>);
+  const mealsList = DUMMY_MEALS.map(meal => <li>{meal.name} {meal.description}</li>);
+
   return (
     <section className={classes.meals}>
+      <Cart>
       <ul>{mealsList}</ul>
+      </Cart>
     </section>
   );
 };
